@@ -8,20 +8,19 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float forwardInput;
 
-    // Boundaries for the x-axis
-    private float leftBoundary = -7f;  // Left boundary
-    private float rightBoundary = 7f; // Right boundary
+    private float leftBoundary = -7f;  
+    private float rightBoundary = 7f; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Restrict the player's position within the boundaries
+        // Restrict player's position within the boundaries
         if (transform.position.x < leftBoundary)
         {
             transform.position = new Vector3(leftBoundary, transform.position.y, transform.position.z);
@@ -35,10 +34,28 @@ public class PlayerController : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
-        // Move the vehicle forward or backward based on vertical input
         transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
 
-        // Turn the vehicle based on horizontal input
         transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
+    }
+
+    public void MoveLeft()
+    {
+        transform.position = new Vector3(-1, 0, 0); 
+    }
+
+    public void MoveRight()
+    {
+         transform.position = new Vector3(1, 0, 0); 
+    }
+
+        public void MoveForward()
+    {
+         transform.position = new Vector3(0, 0, 1); 
+    }
+
+        public void MoveBackward()
+    {
+         transform.position = new Vector3(0, 0, -1); 
     }
 }
