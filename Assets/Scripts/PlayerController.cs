@@ -41,21 +41,28 @@ public class PlayerController : MonoBehaviour
 
     public void MoveLeft()
     {
-        transform.position = new Vector3(-1, 0, 0); 
+        if (transform.position.x > leftBoundary)
+        {
+          // Move left if within boundary
+            transform.position += Vector3.left; 
+        }
     }
 
     public void MoveRight()
     {
-         transform.position = new Vector3(1, 0, 0); 
+        if (transform.position.x < rightBoundary)
+        {
+            transform.position += Vector3.right; 
+        }
     }
 
-        public void MoveForward()
+    public void MoveForward()
     {
-         transform.position = new Vector3(0, 0, 1); 
+        transform.position += Vector3.forward; 
     }
 
-        public void MoveBackward()
+    public void MoveBackward()
     {
-         transform.position = new Vector3(0, 0, -1); 
+        transform.position += Vector3.back; 
     }
 }
