@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject); // Ensure only one instance exists
         }
+        Time.timeScale = 1f;
+        score = 0;
+        currentTime = gameTime;
+        UpdateTimerText();  //Call the timer text to ensure that it works and starts correctly
+        gameOverText.gameObject.SetActive(false); // Hide game over text at start
     }
 
     // Add a public Initialize() method
@@ -33,11 +38,6 @@ public class GameManager : MonoBehaviour
     {
         this.scoreText = scoreText;
         this.timerText = timerText;
-
-        score = 0;
-        currentTime = gameTime;
-        UpdateTimerText();  //Call the timer text to ensure that it works and starts correctly
-        gameOverText.gameObject.SetActive(false); // Hide game over text at start
     }
 
     void Start()
