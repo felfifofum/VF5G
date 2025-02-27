@@ -10,9 +10,9 @@ public class PlayerController : MonoBehaviour
 
     private float leftBoundary = -7f;  
     private float rightBoundary = 7f; 
-
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+  void Start()
     {
 
     }

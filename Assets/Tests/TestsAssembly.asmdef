@@ -1,0 +1,20 @@
+{
+  "name": "TestsAssembly",
+  "rootNamespace": "",
+  "references": [
+    "GUID:d4934f8f49e914c2a8417b71c9a9b0d5",
+    "UnityEngine.TestRunner",
+    "Scripts"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

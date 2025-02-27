@@ -1,37 +1,24 @@
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance; // Singleton instance
+  
+    public TextMeshProUGUI scoreText; 
+    private int score;
+  // Start is called once before the first execution of Update after the MonoBehaviour is created
+  void Start()
+  {
+    score = 0;
+    scoreText.text = "Score: " + score;
 
-    public int score = 0;  // Current score
-
-    public Text scoreText; // UI Text element to display score
-
-    // Make sure to have score text element named `scoreText` in the Game View in your scene!
-    private void Awake()
-    {
-        // Singleton pattern (ensures only one GameManager exists):
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject); // Destroy duplicate game managers
-        }
+    UpdateScore(0);
     }
 
-    // Method to add score
-    public void AddScore(int points)
-    {
-        score += points;
-
-        if (scoreText != null)
-        {
-            scoreText.text = "Score: " + score;
-        }
-
-    }
+  // Update is called once per frame
+  private void UpdateScore(int scoreToAdd)
+  {
+    score += scoreToAdd;
+    scoreText.text = "Score: " + score;
+  }
 }
