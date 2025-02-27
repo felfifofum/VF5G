@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
     private float currentTime; // Current time remaining
     private int score;
     private bool gameOver = false;
+    public TextMeshProUGUI gameOverText;
 
-    void Start()
-    {
-        score = 0;
-        currentTime = gameTime; // ***THIS LINE IS CRITICAL - MUST BE `gameTime`***
-        UpdateTimerText();
+  void Start()
+  {
+    score = 0;
+    currentTime = gameTime; 
+    UpdateTimerText();
+        
     }
 
     void Update()
@@ -23,6 +25,8 @@ public class GameManager : MonoBehaviour
         if (!gameOver)
         {
             currentTime -= Time.deltaTime;
+
+            Debug.Log("Time: " + currentTime); // ADDED DEBUG LINE
 
             if (currentTime <= 0)
             {
@@ -46,8 +50,10 @@ public class GameManager : MonoBehaviour
         timerText.text = seconds.ToString("00"); 
     }
 
-    void GameOver()
+    public void GameOver()
     {
+          gameOverText.gameObject.SetActive(true);
+
         gameOver = true;
         Debug.Log("Game Over!");
         // Display Game Over Screen
