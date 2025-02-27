@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
     private float turnSpeed = 45.0f;
     private float horizontalInput;
     private float forwardInput;
-    private float leftBoundary = -7f;  
-    private float rightBoundary = 7f; 
+    private float leftBoundary = -7f;
+    private float rightBoundary = 7f;
+    private bool canMove = true; // Flag to control movement
 
     void Start()
     {
@@ -16,46 +17,63 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (transform.position.x < leftBoundary)
+        // Check if the game is over before allowing movement
+        if (!GameManager.Instance.IsGameOver())
         {
-            transform.position = new Vector3(leftBoundary, transform.position.y, transform.position.z);
+            //Boundary Movement Restriction
+            if (transform.position.x < leftBoundary)
+            {
+                transform.position = new Vector3(leftBoundary, transform.position.y, transform.position.z);
+            }
+            else if (transform.position.x > rightBoundary)
+            {
+                transform.position = new Vector3(rightBoundary, transform.position.y, transform.position.z);
+            }
+
+            //Player MOvement
+            horizontalInput = Input.GetAxis("Horizontal");
+            forwardInput = Input.GetAxis("Vertical");
+
+            transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
+
+            transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         }
-        else if (transform.position.x > rightBoundary)
+        else
         {
-            transform.position = new Vector3(rightBoundary, transform.position.y, transform.position.z);
+           horizontalInput = 0;
+            forwardInput = 0;
         }
-
-        horizontalInput = Input.GetAxis("Horizontal");
-        forwardInput = Input.GetAxis("Vertical");
-
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-
-        transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
     }
 
     public void MoveLeft()
     {
-        if (transform.position.x > leftBoundary)
+        if (transform.position.x > leftBoundary && !GameManager.Instance.IsGameOver())
         {
-            transform.position += Vector3.left; 
+            transform.position += Vector3.left;
         }
     }
 
     public void MoveRight()
     {
-        if (transform.position.x < rightBoundary)
+        if (transform.position.x < rightBoundary && !GameManager.Instance.IsGameOver())
         {
-            transform.position += Vector3.right; 
+            transform.position += Vector3.right;
         }
     }
 
     public void MoveForward()
     {
-        transform.position += Vector3.forward; 
+        if (!GameManager.Instance.IsGameOver())
+        {
+            transform.position += Vector3.forward;
+        }
     }
 
     public void MoveBackward()
     {
-        transform.position += Vector3.back; 
+        if (!GameManager.Instance.IsGameOver())
+        {
+            transform.position += Vector3.back;
+        }
     }
 }

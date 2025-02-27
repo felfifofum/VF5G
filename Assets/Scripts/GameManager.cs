@@ -1,23 +1,40 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; // Required for scene management
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI timerText; // Reference to the timer text object
-    public float gameTime = 30f; // Total game time in seconds (30 seconds)
-    private float currentTime; // Current time remaining
+    public TextMeshProUGUI timerText;
+    public float gameTime = 30f;
+    private float currentTime;
     private int score;
     private bool gameOver = false;
     public TextMeshProUGUI gameOverText;
 
-  void Start()
-  {
-    score = 0;
-    currentTime = gameTime; 
-    UpdateTimerText();
-        
+    // Static instance for easy access from other scripts
+    public static GameManager Instance { get; private set; }
+
+    void Awake()
+    {
+        // Singleton pattern to ensure only one GameManager exists
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject); // Ensure only one instance exists
+        }
+    }
+
+    void Start()
+    {
+        score = 0;
+        currentTime = gameTime;
+        UpdateTimerText();
+        gameOverText.gameObject.SetActive(false); // Hide game over text at start
+
     }
 
     void Update()
@@ -26,11 +43,9 @@ public class GameManager : MonoBehaviour
         {
             currentTime -= Time.deltaTime;
 
-            Debug.Log("Time: " + currentTime); // ADDED DEBUG LINE
-
             if (currentTime <= 0)
             {
-                currentTime = 0; // Prevents timer from going negative
+                currentTime = 0;
                 GameOver();
             }
 
@@ -47,21 +62,19 @@ public class GameManager : MonoBehaviour
     void UpdateTimerText()
     {
         int seconds = Mathf.FloorToInt(currentTime);
-        timerText.text = seconds.ToString("00"); 
+        timerText.text = seconds.ToString("00");
     }
 
     public void GameOver()
     {
-          gameOverText.gameObject.SetActive(true);
-
+        gameOverText.gameObject.SetActive(true); //show game over screen
         gameOver = true;
+        Time.timeScale = 0f; // Pause the game
         Debug.Log("Game Over!");
-        // Display Game Over Screen
-        //Stop spawning of packets
+    }
 
-        //Stop the player form moving
-
-        // Implement loading your game over screen scene.
-        SceneManager.LoadScene("GameOverScene"); // Replace "GameOverScene" with the actual scene name
+    public bool IsGameOver()
+    {
+        return gameOver;
     }
 }
