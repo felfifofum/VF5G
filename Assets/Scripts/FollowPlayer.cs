@@ -12,9 +12,6 @@ public class FollowPlayer : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    //Vehicle and camera moving at same time - jittery
-    // Late updats after update method happens (after vehicle movea)
     void LateUpdate()
     {
         // Offeset camer behind player by adding to player's position 

@@ -3,7 +3,8 @@ using UnityEngine;
 public class DataPacketPhysics : MonoBehaviour
 {
     private Rigidbody rb;
-    private bool constraintsReleased = false; // To prevent multiple releases
+    private bool constraintsReleased = false;
+    public int scoreValue = 10;
 
     void Start()
     {
@@ -19,6 +20,15 @@ public class DataPacketPhysics : MonoBehaviour
             // Release rotation constraints
             rb.constraints = RigidbodyConstraints.None;
             constraintsReleased = true;
+
+            GameManager gameManager = FindObjectOfType<GameManager>();
+            if (gameManager != null)
+            {
+                // Increase score.
+                gameManager.UpdateScore(scoreValue);
+            }
+
+            Destroy(gameObject);
         }
     }
 }

@@ -2,25 +2,20 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    // Private vars
     private float speed = 20.0f;
     private float turnSpeed = 45.0f;
     private float horizontalInput;
     private float forwardInput;
-
     private float leftBoundary = -7f;  
     private float rightBoundary = 7f; 
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-  void Start()
+
+    void Start()
     {
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Restrict player's position within the boundaries
         if (transform.position.x < leftBoundary)
         {
             transform.position = new Vector3(leftBoundary, transform.position.y, transform.position.z);
@@ -30,7 +25,6 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(rightBoundary, transform.position.y, transform.position.z);
         }
 
-        // Get the player input
         horizontalInput = Input.GetAxis("Horizontal");
         forwardInput = Input.GetAxis("Vertical");
 
@@ -43,7 +37,6 @@ public class PlayerController : MonoBehaviour
     {
         if (transform.position.x > leftBoundary)
         {
-          // Move left if within boundary
             transform.position += Vector3.left; 
         }
     }
