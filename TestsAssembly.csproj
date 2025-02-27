@@ -65,6 +65,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.30f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Tests/GameOverTests.cs" />
     <Compile Include="Assets/Tests/ScoreTests.cs" />
     <Compile Include="Assets/Tests/PlayerControllerTests.cs" />
   </ItemGroup>

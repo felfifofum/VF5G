@@ -28,13 +28,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void Start()
+    // Add a public Initialize() method
+    public void Initialize(TextMeshProUGUI scoreText, TextMeshProUGUI timerText)
     {
+        this.scoreText = scoreText;
+        this.timerText = timerText;
+
         score = 0;
         currentTime = gameTime;
-        UpdateTimerText();
+        UpdateTimerText();  //Call the timer text to ensure that it works and starts correctly
         gameOverText.gameObject.SetActive(false); // Hide game over text at start
+    }
 
+    void Start()
+    {
+        // Do nothing here.  Initialization is handled in Initialize()
     }
 
     void Update()
@@ -61,6 +69,12 @@ public class GameManager : MonoBehaviour
 
     void UpdateTimerText()
     {
+        if (timerText == null) //CRUCIAL check
+        {
+            Debug.LogError("Timer text is null in UpdateTimerText!");
+            return; //Exit to prevent errors
+        }
+
         int seconds = Mathf.FloorToInt(currentTime);
         timerText.text = seconds.ToString("00");
     }
