@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     private bool gameOver = false;
     public TextMeshProUGUI gameOverText;
 
-    private PlayerController playerController; // Reference to the PlayerController
+    public PlayerController playerController; // Reference to the PlayerController
 
     void Awake()
     {
@@ -63,34 +63,38 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        scoreText.text = "Score: " + score;
+        if (scoreText != null) // Add this null check
+        {
+            scoreText.text = "Score: " + score;
+        }
     }
 
     void UpdateTimerText()
-{
-    if (timerText != null) // Add this null check
     {
-        int seconds = Mathf.FloorToInt(currentTime);
-        timerText.text = seconds.ToString("00");
+        if (timerText != null) // Add this null check
+        {
+            int seconds = Mathf.FloorToInt(currentTime);
+            timerText.text = seconds.ToString("00");
+        }
     }
-}
 
-    public void GameOver()
+        public void GameOver()
     {
-        gameOverText.gameObject.SetActive(true);
+        if(gameOverText != null) // Added so test works
+             gameOverText.gameObject.SetActive(true);
+
         gameOver = true;
+        Debug.Log("Game Over!");
 
         // Stop Player Movement
         if (playerController != null)
         {
-            playerController.StopMoving();
+            playerController.enabled = false; // Disable the PlayerController script instead of calling StopMoving()
         }
 
-        // Implement loading your game over screen scene.
-        SceneManager.LoadScene("GameOverScene"); // Replace "GameOverScene" with the actual scene name
     }
 
-        public bool IsGameOver()
+    public bool IsGameOver()
     {
         return gameOver;
     }
