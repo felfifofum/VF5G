@@ -1,48 +1,47 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // Required for scene management
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance; // Static instance for easy access
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI timerText;
-    public float gameTime = 30f;
-    private float currentTime;
+    public TextMeshProUGUI timerText; // Reference to the timer text object
+    public float gameTime = 30f; // Total game time in seconds (30 seconds)
+    private float currentTime; // Current time remaining
     private int score;
     private bool gameOver = false;
     public TextMeshProUGUI gameOverText;
 
-    // Static instance for easy access from other scripts
-    public static GameManager Instance { get; private set; }
+    private PlayerController playerController; // Reference to the PlayerController
 
     void Awake()
     {
-        // Singleton pattern to ensure only one GameManager exists
+        // Singleton pattern
         if (Instance == null)
         {
             Instance = this;
         }
         else
         {
-            Destroy(gameObject); // Ensure only one instance exists
+            Destroy(gameObject); // Destroy duplicate instances
         }
-        Time.timeScale = 1f;
-        score = 0;
-        currentTime = gameTime;
-        UpdateTimerText();  //Call the timer text to ensure that it works and starts correctly
-        gameOverText.gameObject.SetActive(false); // Hide game over text at start
-    }
-
-    // Add a public Initialize() method
-    public void Initialize(TextMeshProUGUI scoreText, TextMeshProUGUI timerText)
-    {
-        this.scoreText = scoreText;
-        this.timerText = timerText;
     }
 
     void Start()
     {
-        // Do nothing here.  Initialization is handled in Initialize()
+        score = 0;
+        currentTime = gameTime;
+        UpdateTimerText();
+
+        // Find the PlayerController in the scene (assuming there's only one)
+        playerController = FindObjectOfType<PlayerController>();
+
+        if (playerController == null)
+        {
+            Debug.LogError("PlayerController not found in the scene!  Make sure it exists.");
+        }
+
     }
 
     void Update()
@@ -53,7 +52,7 @@ public class GameManager : MonoBehaviour
 
             if (currentTime <= 0)
             {
-                currentTime = 0;
+                currentTime = 0; // Prevents timer from going negative
                 GameOver();
             }
 
@@ -68,26 +67,30 @@ public class GameManager : MonoBehaviour
     }
 
     void UpdateTimerText()
+{
+    if (timerText != null) // Add this null check
     {
-        if (timerText == null) //CRUCIAL check
-        {
-            Debug.LogError("Timer text is null in UpdateTimerText!");
-            return; //Exit to prevent errors
-        }
-
         int seconds = Mathf.FloorToInt(currentTime);
         timerText.text = seconds.ToString("00");
     }
+}
 
     public void GameOver()
     {
-        gameOverText.gameObject.SetActive(true); //show game over screen
+        gameOverText.gameObject.SetActive(true);
         gameOver = true;
-        Time.timeScale = 0f; // Pause the game
-        Debug.Log("Game Over!");
+
+        // Stop Player Movement
+        if (playerController != null)
+        {
+            playerController.StopMoving();
+        }
+
+        // Implement loading your game over screen scene.
+        SceneManager.LoadScene("GameOverScene"); // Replace "GameOverScene" with the actual scene name
     }
 
-    public bool IsGameOver()
+        public bool IsGameOver()
     {
         return gameOver;
     }

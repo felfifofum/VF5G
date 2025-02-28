@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Check if the game is over before allowing movement
-        if (!GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
         {
             //Boundary Movement Restriction
             if (transform.position.x < leftBoundary)
@@ -40,14 +40,14 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-           horizontalInput = 0;
+            horizontalInput = 0;
             forwardInput = 0;
         }
     }
 
     public void MoveLeft()
     {
-        if (transform.position.x > leftBoundary && !GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && transform.position.x > leftBoundary && !GameManager.Instance.IsGameOver())
         {
             transform.position += Vector3.left;
         }
@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     public void MoveRight()
     {
-        if (transform.position.x < rightBoundary && !GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && transform.position.x < rightBoundary && !GameManager.Instance.IsGameOver())
         {
             transform.position += Vector3.right;
         }
@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
 
     public void MoveForward()
     {
-        if (!GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
         {
             transform.position += Vector3.forward;
         }
@@ -71,9 +71,15 @@ public class PlayerController : MonoBehaviour
 
     public void MoveBackward()
     {
-        if (!GameManager.Instance.IsGameOver())
+        if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
         {
             transform.position += Vector3.back;
         }
+    }
+    public void StopMoving()
+    {
+        canMove = false; // Set the canMove flag to false to stop movement.
+        speed = 0;       // Stop moving forwards by setting its speed to 0;
+        turnSpeed = 0;     // stop turning by setting its turnSpeed to 0.
     }
 }
