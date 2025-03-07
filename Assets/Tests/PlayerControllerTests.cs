@@ -7,24 +7,27 @@ public class PlayerControllerTests
 {
     private GameObject car;
     private PlayerController playerController;
-    private GameObject gameManagerGO; // Keep track of the GameManager GameObject
-    private GameManager gameManager; // Keep track of the GameManager component
+    private GameObject gameManagerGO;
+    private GameManager gameManager;
+
+    // Improved dirrection using DRY principles
+    // Direction vectors defined once and all future modifications happen in one place
+    private static readonly Vector3 Left = Vector3.left;
+    private static readonly Vector3 Right = Vector3.right;
+    private static readonly Vector3 Forward = Vector3.forward;
+    private static readonly Vector3 Backward = Vector3.back;
 
     [SetUp]
     public void SetUp()
     {
-        // Arrange
         car = new GameObject();
         playerController = car.AddComponent<PlayerController>();
 
-        // Create GameManager GameObject and add GameManager component
         gameManagerGO = new GameObject("GameManager");
         gameManager = gameManagerGO.AddComponent<GameManager>();
 
-        // Set the GameManager.Instance BEFORE the PlayerController tries to access it
-        GameManager.Instance = gameManager;  // VERY IMPORTANT: Set the singleton instance
+        GameManager.Instance = gameManager;
 
-        // Explicitly set the scoreText and timerText to null to avoid errors during the test, it will not be called anyway.
         gameManager.scoreText = null;
         gameManager.timerText = null;
         gameManager.gameOverText = null;
@@ -33,77 +36,62 @@ public class PlayerControllerTests
     [TearDown]
     public void TearDown()
     {
-        // Destroy the car and GameManager after each test
         Object.Destroy(car);
 
-        if (gameManagerGO != null) // Check if gameManagerGO is not null before destroying it
+        if (gameManagerGO != null)
         {
             Object.Destroy(gameManagerGO);
         }
 
-        GameManager.Instance = null; // Reset the singleton instance
+        GameManager.Instance = null;
     }
 
     [Test]
     public void TestCarMovesLeft()
     {
-        // Arrange
         car.transform.position = Vector3.zero;
 
-        // Act
-        playerController.MoveLeft();
+        playerController.Move(Left);
 
-        // Assert
         Assert.AreEqual(new Vector3(-1, 0, 0), car.transform.position);
     }
 
     [Test]
     public void TestCarMovesRight()
     {
-        // Arrange
         car.transform.position = Vector3.zero;
 
-        // Act
-        playerController.MoveRight();
+        playerController.Move(Right);
 
-        // Assert
         Assert.AreEqual(new Vector3(1, 0, 0), car.transform.position);
     }
 
     [Test]
     public void TestCarMovesForward()
     {
-        // Arrange
         car.transform.position = Vector3.zero;
 
-        // Act
-        playerController.MoveForward();
+        playerController.Move(Forward);
 
-        // Assert
         Assert.AreEqual(new Vector3(0, 0, 1), car.transform.position);
     }
 
     [Test]
     public void TestCarMovesBackward()
     {
-        // Arrange
         car.transform.position = Vector3.zero;
 
-        // Act
-        playerController.MoveBackward();
+        playerController.Move(Backward);
 
-        // Assert
         Assert.AreEqual(new Vector3(0, 0, -1), car.transform.position);
     }
 
     [UnityTest]
     public IEnumerator TestCarDoesNotMoveOutOfBoundsLeft()
     {
-
-        // 7 is left boundary
         car.transform.position = new Vector3(-7, 0, 0);
 
-        playerController.MoveLeft();
+        playerController.Move(Left);
         yield return null;
 
         Assert.AreEqual(new Vector3(-7, 0, 0), car.transform.position);
@@ -112,14 +100,11 @@ public class PlayerControllerTests
     [UnityTest]
     public IEnumerator TestCarDoesNotMoveOutOfBoundsRight()
     {
-        // Arrange
         car.transform.position = new Vector3(7, 0, 0);
 
-        // Act
-        playerController.MoveRight();
+        playerController.Move(Right);
         yield return null;
 
-        // Assert
         Assert.AreEqual(new Vector3(7, 0, 0), car.transform.position);
     }
 }

@@ -8,34 +8,18 @@ public class PlayerController : MonoBehaviour
     private float forwardInput;
     private float leftBoundary = -7f;
     private float rightBoundary = 7f;
-    private bool canMove = true; // Flag to control movement
-
-    void Start()
-    {
-
-    }
+    private bool canMove = true; 
 
     void Update()
     {
-        // Check if the game is over before allowing movement
         if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
         {
-            //Boundary Movement Restriction
-            if (transform.position.x < leftBoundary)
-            {
-                transform.position = new Vector3(leftBoundary, transform.position.y, transform.position.z);
-            }
-            else if (transform.position.x > rightBoundary)
-            {
-                transform.position = new Vector3(rightBoundary, transform.position.y, transform.position.z);
-            }
+            ApplyBoundaryLimits();
 
-            //Player MOvement
             horizontalInput = Input.GetAxis("Horizontal");
             forwardInput = Input.GetAxis("Vertical");
 
             transform.Translate(Vector3.forward * Time.deltaTime * speed * forwardInput);
-
             transform.Rotate(Vector3.up, turnSpeed * horizontalInput * Time.deltaTime);
         }
         else
@@ -45,41 +29,34 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void MoveLeft()
-    {
-        if (GameManager.Instance != null && transform.position.x > leftBoundary && !GameManager.Instance.IsGameOver())
-        {
-            transform.position += Vector3.left;
-        }
-    }
-
-    public void MoveRight()
-    {
-        if (GameManager.Instance != null && transform.position.x < rightBoundary && !GameManager.Instance.IsGameOver())
-        {
-            transform.position += Vector3.right;
-        }
-    }
-
-    public void MoveForward()
+    public void Move(Vector3 direction)
     {
         if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
         {
-            transform.position += Vector3.forward;
+            Vector3 newPosition = transform.position + direction;
+
+            newPosition.x = Mathf.Clamp(newPosition.x, leftBoundary, rightBoundary);
+
+            transform.position = newPosition;
         }
     }
 
-    public void MoveBackward()
-    {
-        if (GameManager.Instance != null && !GameManager.Instance.IsGameOver())
-        {
-            transform.position += Vector3.back;
-        }
-    }
     public void StopMoving()
     {
-        canMove = false; // Set the canMove flag to false to stop movement.
-        speed = 0;       // Stop moving forwards by setting its speed to 0;
-        turnSpeed = 0;     // stop turning by setting its turnSpeed to 0.
+        canMove = false;
+        speed = 0;
+        turnSpeed = 0;
+    }
+
+    private void ApplyBoundaryLimits()
+    {
+        if (transform.position.x < leftBoundary)
+        {
+            transform.position = new Vector3(leftBoundary, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x > rightBoundary)
+        {
+            transform.position = new Vector3(rightBoundary, transform.position.y, transform.position.z);
+        }
     }
 }
