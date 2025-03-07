@@ -4,24 +4,22 @@ using UnityEngine.SceneManagement;
 
 public class UIMenuManager : MonoBehaviour
 {
-    public GameObject gameOverMenu;
     public Button restartButton; 
     public Button quitButton; 
 
-  public UIMenuManager uiMenuManager;
-
     void Start()
     {
-        // Add listeners to buttons
         restartButton.onClick.AddListener(() => RestartGame());
         quitButton.onClick.AddListener(() => QuitGame());
 
-        gameOverMenu.SetActive(false); 
+        restartButton.enabled = false;
+        quitButton.enabled = false;
     }
 
-    public void ShowGameOverMenu()
+    public void ShowGameOverButtons()
     {
-        gameOverMenu.SetActive(true); 
+        restartButton.enabled = true;
+        quitButton.enabled = true;
     }
 
     void RestartGame()
@@ -32,6 +30,6 @@ public class UIMenuManager : MonoBehaviour
     void QuitGame()
     {
         Debug.Log("Quitting Game");
-        Application.Quit(); 
+        Application.Quit(); // Quits the application (works in builds, not in the editor)
     }
 }

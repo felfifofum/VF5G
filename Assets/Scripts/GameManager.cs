@@ -1,19 +1,21 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement; // Required for scene management
+using UnityEngine.SceneManagement; 
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance; // Static instance for easy access
+    public static GameManager Instance; 
     public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI timerText; // Reference to the timer text object
-    public float gameTime = 30f; // Total game time in seconds (30 seconds)
-    private float currentTime; // Current time remaining
+    public TextMeshProUGUI timerText; 
+    public float gameTime = 30f; 
+    private float currentTime; 
     private int score;
     private bool gameOver = false;
     public TextMeshProUGUI gameOverText;
 
-    public PlayerController playerController; // Reference to the PlayerController
+    public PlayerController playerController; 
+
+    public UIMenuManager uiMenuManager; 
 
     void Awake()
     {
@@ -34,12 +36,18 @@ public class GameManager : MonoBehaviour
         currentTime = gameTime;
         UpdateTimerText();
 
-        // Find the PlayerController in the scene (assuming there's only one)
         playerController = FindObjectOfType<PlayerController>();
 
         if (playerController == null)
         {
             Debug.LogError("PlayerController not found in the scene!  Make sure it exists.");
+        }
+
+         uiMenuManager = FindObjectOfType<UIMenuManager>();
+
+        if (uiMenuManager == null)
+        {
+          Debug.LogError("UIMenuManager not found in the scene!  Make sure it exists.");
         }
 
     }
@@ -63,7 +71,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        if (scoreText != null) // Add this null check
+        if (scoreText != null) 
         {
             scoreText.text = "Score: " + score;
         }
@@ -71,14 +79,14 @@ public class GameManager : MonoBehaviour
 
     void UpdateTimerText()
     {
-        if (timerText != null) // Add this null check
+        if (timerText != null) 
         {
             int seconds = Mathf.FloorToInt(currentTime);
             timerText.text = seconds.ToString("00");
         }
     }
 
-     public void GameOver()
+    public void GameOver()
     {
         if(gameOverText != null) // Added so test works
              gameOverText.gameObject.SetActive(true);
@@ -89,9 +97,13 @@ public class GameManager : MonoBehaviour
         // Stop Player Movement
         if (playerController != null)
         {
-            playerController.enabled = false; // Disable the PlayerController script instead of calling StopMoving()
+            playerController.enabled = false; 
         }
 
+        if (uiMenuManager != null)
+        {
+            uiMenuManager.ShowGameOverButtons();
+        }
     }
 
     public bool IsGameOver()
