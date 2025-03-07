@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/DataPacketPhysics.cs" />
+    <Compile Include="Assets/Scripts/UIMenuManager.cs" />
     <Compile Include="Assets/Scripts/FollowPlayer.cs" />
     <Compile Include="Assets/Scripts/GameManager.cs" />
   </ItemGroup>

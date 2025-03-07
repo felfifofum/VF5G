@@ -20,7 +20,7 @@ MonoBehaviour:
     height: 428
   m_ShowMode: 0
   m_Title: Console
-  m_RootView: {fileID: 5}
+  m_RootView: {fileID: 4}
   m_MinSize: {x: 50, y: 76}
   m_MaxSize: {x: 4000, y: 4026}
   m_Maximized: 0
@@ -38,41 +38,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 1107
-    y: 334
-    width: 404
-    height: 578
-  m_ShowMode: 0
-  m_Title: Test Runner
-  m_RootView: {fileID: 7}
-  m_MinSize: {x: 50, y: 76}
-  m_MaxSize: {x: 4000, y: 4026}
-  m_Maximized: 0
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PixelRect:
-    serializedVersion: 2
-    x: 217
+    x: 98
     y: 66
-    width: 1294
+    width: 1433
     height: 1051
   m_ShowMode: 4
-  m_Title: Project
-  m_RootView: {fileID: 8}
+  m_Title: Game
+  m_RootView: {fileID: 5}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
---- !u!114 &4
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,12 +69,12 @@ MonoBehaviour:
     height: 428
   m_MinSize: {x: 50, y: 76}
   m_MaxSize: {x: 4000, y: 4026}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 15}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 15}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +87,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 4}
+  - {fileID: 3}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -121,60 +97,9 @@ MonoBehaviour:
   m_MinSize: {x: 50, y: 76}
   m_MaxSize: {x: 4000, y: 4026}
   vertical: 0
-  controlID: 2103
+  controlID: 2364
   draggingID: 0
---- !u!114 &6
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: TestRunnerWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 404
-    height: 578
-  m_MinSize: {x: 50, y: 76}
-  m_MaxSize: {x: 4000, y: 4026}
-  m_ActualView: {fileID: 19}
-  m_Panes:
-  - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &7
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
-  - {fileID: 6}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 404
-    height: 578
-  m_MinSize: {x: 50, y: 76}
-  m_MaxSize: {x: 4000, y: 4026}
-  vertical: 0
-  controlID: 396
-  draggingID: 0
---- !u!114 &8
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -187,14 +112,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 9}
-  - {fileID: 11}
-  - {fileID: 10}
+  - {fileID: 6}
+  - {fileID: 8}
+  - {fileID: 7}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1294
+    width: 1433
     height: 1051
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -202,7 +127,7 @@ MonoBehaviour:
   m_TopViewHeight: 36
   m_UseBottomView: 1
   m_BottomViewHeight: 20
---- !u!114 &9
+--- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,12 +144,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1294
+    width: 1433
     height: 36
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &10
+--- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -241,11 +166,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 1031
-    width: 1294
+    width: 1433
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &11
+--- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -258,48 +183,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
+  - {fileID: 9}
   - {fileID: 12}
-  - {fileID: 15}
-  - {fileID: 16}
-  - {fileID: 17}
-  m_Position:
-    serializedVersion: 2
-    x: 0
-    y: 36
-    width: 1294
-    height: 995
-  m_MinSize: {x: 400, y: 100}
-  m_MaxSize: {x: 32384, y: 16192}
-  vertical: 0
-  controlID: 95
-  draggingID: 0
---- !u!114 &12
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children:
   - {fileID: 13}
   - {fileID: 14}
   m_Position:
     serializedVersion: 2
     x: 0
+    y: 36
+    width: 1433
+    height: 995
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 32384, y: 16192}
+  vertical: 0
+  controlID: 86
+  draggingID: 0
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
     y: 0
-    width: 541
+    width: 597.5
     height: 995
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 53
+  controlID: 87
   draggingID: 0
---- !u!114 &13
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,13 +241,91 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 541
+    width: 597.5
     height: 505.5
   m_MinSize: {x: 201, y: 226}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 20}
+  m_ActualView: {fileID: 16}
   m_Panes:
-  - {fileID: 20}
+  - {fileID: 16}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 505.5
+    width: 597.5
+    height: 489.5
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 597.5
+    y: 0
+    width: 204.5
+    height: 995
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 802
+    y: 0
+    width: 253.5
+    height: 995
+  m_MinSize: {x: 232, y: 276}
+  m_MaxSize: {x: 10002, y: 10026}
+  m_ActualView: {fileID: 19}
+  m_Panes:
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &14
@@ -340,96 +343,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 0
-    y: 505.5
-    width: 541
-    height: 489.5
-  m_MinSize: {x: 201, y: 226}
-  m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 21}
-  m_Panes:
-  - {fileID: 21}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &15
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 541
+    x: 1055.5
     y: 0
-    width: 184
-    height: 995
-  m_MinSize: {x: 202, y: 226}
-  m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 22}
-  m_Panes:
-  - {fileID: 22}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &16
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 725
-    y: 0
-    width: 230
-    height: 995
-  m_MinSize: {x: 232, y: 276}
-  m_MaxSize: {x: 10002, y: 10026}
-  m_ActualView: {fileID: 23}
-  m_Panes:
-  - {fileID: 23}
-  m_Selected: 0
-  m_LastSelected: 0
---- !u!114 &17
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 955
-    y: 0
-    width: 339
+    width: 377.5
     height: 995
   m_MinSize: {x: 276, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 24}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 24}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &18
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -465,611 +390,7 @@ MonoBehaviour:
     m_SaveData: []
     m_ContainerData: []
     m_OverlaysVisible: 1
---- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 50, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Test Runner
-    m_Image: {fileID: 0}
-    m_Tooltip: Test framework for running Edit mode and Play mode tests in Unity.
-      Part of the com.unity.test-framework package.
-    m_TextWithWhitespace: "Test Runner\u200B"
-  m_Pos:
-    serializedVersion: 2
-    x: 0
-    y: 26
-    width: 404
-    height: 552
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_ContainerData: []
-    m_OverlaysVisible: 1
-  m_Spl:
-    ID: 427
-    splitterInitialOffset: 466
-    currentActiveSplitter: -1
-    realSizes:
-    - 418.5
-    - 63.5
-    relativeSizes:
-    - 0.8682573
-    - 0.13174272
-    minSizes:
-    - 32
-    - 32
-    maxSizes:
-    - 0
-    - 0
-    lastTotalSize: 482
-    splitSize: 6
-    xOffset: 0
-    m_Version: 1
-    oldRealSizes: 
-    oldMinSizes: 
-    oldMaxSizes: 
-    oldSplitSize: 0
-  m_TestTypeToolbarIndex: 1
-  m_TestListGUIs:
-  - m_Window: {fileID: 19}
-    runProgress:
-      RunGuid: 29c76f40-bf0d-4120-be21-2dc287c991c6
-      ExecutionSettings:
-        m_TargetPlatform: 0
-        m_HasTargetPlatform: 0
-        filter:
-          testMode: 0
-          testNames: []
-          groupNames: []
-          categoryNames: []
-          assemblyNames: []
-        filters:
-        - testMode: 2
-          testNames:
-          - GameOverTests.GameOverScreenAppearsAfterTimerEnds
-          groupNames: []
-          categoryNames: []
-          assemblyNames: []
-        runSynchronously: 0
-        playerHeartbeatTimeout: 600
-        orderedTestNames: []
-        ignoreTests: []
-        featureFlags:
-          fileCleanUpCheck: 0
-          requiresSplashScreen: 0
-          strictDomainReload: 0
-          disableNestedEnumeratorBugfix: 0
-        randomOrderSeed: 0
-      HasFinished: 1
-      Progress: 0.15749997
-      CurrentStepName: Unlock Reload Assemblies
-      CurrentStageName: 
-    m_NewResultList:
-    - id: 1016
-      uniqueId: '[Prototype 1][suite]'
-      name: Prototype 1
-      fullName: Prototype 1
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 39b39bffffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategories: []
-      availableCategories:
-      - Uncategorized
-    m_SelectedOption: 0
-  - m_Window: {fileID: 19}
-    runProgress:
-      RunGuid: 29c76f40-bf0d-4120-be21-2dc287c991c6
-      ExecutionSettings:
-        m_TargetPlatform: 0
-        m_HasTargetPlatform: 0
-        filter:
-          testMode: 0
-          testNames: []
-          groupNames: []
-          categoryNames: []
-          assemblyNames: []
-        filters:
-        - testMode: 2
-          testNames:
-          - GameOverTests.GameOverScreenAppearsAfterTimerEnds
-          groupNames: []
-          categoryNames: []
-          assemblyNames: []
-        runSynchronously: 0
-        playerHeartbeatTimeout: 600
-        orderedTestNames: []
-        ignoreTests: []
-        featureFlags:
-          fileCleanUpCheck: 0
-          requiresSplashScreen: 0
-          strictDomainReload: 0
-          disableNestedEnumeratorBugfix: 0
-        randomOrderSeed: 0
-      HasFinished: 1
-      Progress: 0.15749997
-      CurrentStepName: Unlock Reload Assemblies
-      CurrentStageName: 
-    m_NewResultList:
-    - id: 1000
-      uniqueId: '[Prototype 1][suite]'
-      name: Prototype 1
-      fullName: Prototype 1
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 
-      parentUniqueId: 
-    - id: 1012
-      uniqueId: '[TestsAssembly][/Users/brucef/Desktop/Create with Code/Prototype
-        1/Library/ScriptAssemblies/TestsAssembly.dll][suite]'
-      name: TestsAssembly.dll
-      fullName: /Users/brucef/Desktop/Create with Code/Prototype 1/Library/ScriptAssemblies/TestsAssembly.dll
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Prototype 1][suite]'
-    - id: 1001
-      uniqueId: 'TestsAssembly.dll/[TestsAssembly][GameOverTests][suite]'
-      name: GameOverTests
-      fullName: GameOverTests
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: '[TestsAssembly][/Users/brucef/Desktop/Create with Code/Prototype
-        1/Library/ScriptAssemblies/TestsAssembly.dll][suite]'
-    - id: 1002
-      uniqueId: 'TestsAssembly.dll/GameOverTests/[TestsAssembly][GameOverTests.GameOverScreenAppearsAfterTimerEnds]'
-      name: GameOverScreenAppearsAfterTimerEnds
-      fullName: GameOverTests.GameOverScreenAppearsAfterTimerEnds
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][GameOverTests][suite]'
-    - id: 1003
-      uniqueId: 'TestsAssembly.dll/[TestsAssembly][PlayerControllerTests][suite]'
-      name: PlayerControllerTests
-      fullName: PlayerControllerTests
-      resultStatus: 2
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: '[TestsAssembly][/Users/brucef/Desktop/Create with Code/Prototype
-        1/Library/ScriptAssemblies/TestsAssembly.dll][suite]'
-    - id: 1008
-      uniqueId: 'TestsAssembly.dll/PlayerControllerTests/[TestsAssembly][PlayerControllerTests.TestCarDoesNotMoveOutOfBoundsLeft]'
-      name: TestCarDoesNotMoveOutOfBoundsLeft
-      fullName: PlayerControllerTests.TestCarDoesNotMoveOutOfBoundsLeft
-      resultStatus: 2
-      duration: 0.0229128
-      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
-        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'NullReferenceException: Object reference not set to an instance of
-        an object
-
-        PlayerController.Update () (at Assets/Scripts/PlayerController.cs:21)
-
-
-'
-      stacktrace: 'PlayerController.Update () (at Assets/Scripts/PlayerController.cs:21)
-
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][PlayerControllerTests][suite]'
-    - id: 1009
-      uniqueId: 'TestsAssembly.dll/PlayerControllerTests/[TestsAssembly][PlayerControllerTests.TestCarDoesNotMoveOutOfBoundsRight]'
-      name: TestCarDoesNotMoveOutOfBoundsRight
-      fullName: PlayerControllerTests.TestCarDoesNotMoveOutOfBoundsRight
-      resultStatus: 2
-      duration: 0.0178633
-      messages: 'Unhandled log message: ''[Exception] NullReferenceException: Object
-        reference not set to an instance of an object''. Use UnityEngine.TestTools.LogAssert.Expect'
-      output: 'NullReferenceException: Object reference not set to an instance of
-        an object
-
-        PlayerController.Update () (at Assets/Scripts/PlayerController.cs:21)
-
-
-        NullReferenceException:
-        Object reference not set to an instance of an object
-
-        PlayerController.Update
-        () (at Assets/Scripts/PlayerController.cs:21)
-
-
-'
-      stacktrace: 'PlayerController.Update () (at Assets/Scripts/PlayerController.cs:21)
-
-
-'
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][PlayerControllerTests][suite]'
-    - id: 1007
-      uniqueId: 'TestsAssembly.dll/PlayerControllerTests/[TestsAssembly][PlayerControllerTests.TestCarMovesBackward]'
-      name: TestCarMovesBackward
-      fullName: PlayerControllerTests.TestCarMovesBackward
-      resultStatus: 2
-      duration: 0.0030146
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 
-      stacktrace: "  at PlayerController.MoveBackward () [0x00000] in /Users/brucef/Desktop/Create
-        with Code/Prototype 1/Assets/Scripts/PlayerController.cs:74 \n  at PlayerControllerTests.TestCarMovesBackward
-        () [0x00015] in /Users/brucef/Desktop/Create with Code/Prototype 1/Assets/Tests/PlayerControllerTests.cs:64
-        \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][PlayerControllerTests][suite]'
-    - id: 1006
-      uniqueId: 'TestsAssembly.dll/PlayerControllerTests/[TestsAssembly][PlayerControllerTests.TestCarMovesForward]'
-      name: TestCarMovesForward
-      fullName: PlayerControllerTests.TestCarMovesForward
-      resultStatus: 2
-      duration: 0.0003072
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 
-      stacktrace: "  at PlayerController.MoveForward () [0x00000] in /Users/brucef/Desktop/Create
-        with Code/Prototype 1/Assets/Scripts/PlayerController.cs:66 \n  at PlayerControllerTests.TestCarMovesForward
-        () [0x00015] in /Users/brucef/Desktop/Create with Code/Prototype 1/Assets/Tests/PlayerControllerTests.cs:51
-        \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][PlayerControllerTests][suite]'
-    - id: 1004
-      uniqueId: 'TestsAssembly.dll/PlayerControllerTests/[TestsAssembly][PlayerControllerTests.TestCarMovesLeft]'
-      name: TestCarMovesLeft
-      fullName: PlayerControllerTests.TestCarMovesLeft
-      resultStatus: 2
-      duration: 0.000289
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 
-      stacktrace: "  at PlayerController.MoveLeft () [0x00000] in /Users/brucef/Desktop/Create
-        with Code/Prototype 1/Assets/Scripts/PlayerController.cs:50 \n  at PlayerControllerTests.TestCarMovesLeft
-        () [0x00015] in /Users/brucef/Desktop/Create with Code/Prototype 1/Assets/Tests/PlayerControllerTests.cs:25
-        \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][PlayerControllerTests][suite]'
-    - id: 1005
-      uniqueId: 'TestsAssembly.dll/PlayerControllerTests/[TestsAssembly][PlayerControllerTests.TestCarMovesRight]'
-      name: TestCarMovesRight
-      fullName: PlayerControllerTests.TestCarMovesRight
-      resultStatus: 2
-      duration: 0.0002488
-      messages: 'System.NullReferenceException : Object reference not set to an instance
-        of an object'
-      output: 
-      stacktrace: "  at PlayerController.MoveRight () [0x00000] in /Users/brucef/Desktop/Create
-        with Code/Prototype 1/Assets/Scripts/PlayerController.cs:58 \n  at PlayerControllerTests.TestCarMovesRight
-        () [0x00015] in /Users/brucef/Desktop/Create with Code/Prototype 1/Assets/Tests/PlayerControllerTests.cs:38
-        \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n 
-        at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags
-        invokeAttr, System.Reflection.Binder binder, System.Object[] parameters,
-        System.Globalization.CultureInfo culture) [0x0006a] in <3aacbe608a2f468eb6bb1c15e219490d>:0 "
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1003
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][PlayerControllerTests][suite]'
-    - id: 1010
-      uniqueId: 'TestsAssembly.dll/[TestsAssembly][ScoreTests][suite]'
-      name: ScoreTests
-      fullName: ScoreTests
-      resultStatus: 1
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1012
-      parentUniqueId: '[TestsAssembly][/Users/brucef/Desktop/Create with Code/Prototype
-        1/Library/ScriptAssemblies/TestsAssembly.dll][suite]'
-    - id: 1011
-      uniqueId: 'TestsAssembly.dll/ScoreTests/[TestsAssembly][ScoreTests.ScoreIncreasesOnFirstCollision]'
-      name: ScoreIncreasesOnFirstCollision
-      fullName: ScoreTests.ScoreIncreasesOnFirstCollision
-      resultStatus: 1
-      duration: 0.0903945
-      messages: 
-      output: 'Physics.Simulate(...) was called but simulation mode is not set to
-        Script. You should set simulation mode to Script first before calling this
-        function therefore the simulation was not run.
-
-        Physics.Simulate(...)
-        was called but simulation mode is not set to Script. You should set simulation
-        mode to Script first before calling this function therefore the simulation
-        was not run.
-
-        Physics.Simulate(...) was called but simulation mode
-        is not set to Script. You should set simulation mode to Script first before
-        calling this function therefore the simulation was not run.
-
-        Physics.Simulate(...)
-        was called but simulation mode is not set to Script. You should set simulation
-        mode to Script first before calling this function therefore the simulation
-        was not run.
-
-        Physics.Simulate(...) was called but simulation mode
-        is not set to Script. You should set simulation mode to Script first before
-        calling this function therefore the simulation was not run.
-
-        Physics.Simulate(...)
-        was called but simulation mode is not set to Script. You should set simulation
-        mode to Script first before calling this function therefore the simulation
-        was not run.
-
-        Physics.Simulate(...) was called but simulation mode
-        is not set to Script. You should set simulation mode to Script first before
-        calling this function therefore the simulation was not run.
-
-        Physics.Simulate(...)
-        was called but simulation mode is not set to Script. You should set simulation
-        mode to Script first before calling this function therefore the simulation
-        was not run.
-
-        Physics.Simulate(...) was called but simulation mode
-        is not set to Script. You should set simulation mode to Script first before
-        calling this function therefore the simulation was not run.
-
-        Physics.Simulate(...)
-        was called but simulation mode is not set to Script. You should set simulation
-        mode to Script first before calling this function therefore the simulation
-        was not run.
-
-        Collision Detected with: Vehicle
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: 'TestsAssembly.dll/[TestsAssembly][ScoreTests][suite]'
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d73b983f
-      m_LastClickedID: 1066941399
-      m_ExpandedIDs: 4ce14bbdefc2f1d039b39bff2a948e32bfa97736ffffff7f
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategories: []
-      availableCategories:
-      - Uncategorized
-    m_SelectedOption: 0
-  - m_Window: {fileID: 0}
-    runProgress:
-      RunGuid: 29c76f40-bf0d-4120-be21-2dc287c991c6
-      ExecutionSettings:
-        m_TargetPlatform: 0
-        m_HasTargetPlatform: 0
-        filter:
-          testMode: 0
-          testNames: []
-          groupNames: []
-          categoryNames: []
-          assemblyNames: []
-        filters:
-        - testMode: 2
-          testNames:
-          - GameOverTests.GameOverScreenAppearsAfterTimerEnds
-          groupNames: []
-          categoryNames: []
-          assemblyNames: []
-        runSynchronously: 0
-        playerHeartbeatTimeout: 600
-        orderedTestNames: []
-        ignoreTests: []
-        featureFlags:
-          fileCleanUpCheck: 0
-          requiresSplashScreen: 0
-          strictDomainReload: 0
-          disableNestedEnumeratorBugfix: 0
-        randomOrderSeed: 0
-      HasFinished: 1
-      Progress: 0.15749997
-      CurrentStepName: Unlock Reload Assemblies
-      CurrentStageName: 
-    m_NewResultList: []
-    m_ResultText: 
-    m_ResultStacktrace: 
-    m_TestListState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 
-      m_RenameOverlay:
-        m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
-        m_EditFieldRect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0
-          height: 0
-        m_UserData: 0
-        m_IsWaitingForDelay: 0
-        m_IsRenaming: 0
-        m_OriginalEventType: 11
-        m_IsRenamingFilename: 0
-        m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 0}
-      m_SearchString: 
-    m_TestRunnerUIFilter:
-      PassedHidden: 0
-      FailedHidden: 0
-      NotRunHidden: 0
-      m_SearchString: 
-      selectedCategories: []
-      availableCategories: []
-    m_SelectedOption: 0
---- !u!114 &20
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1092,7 +413,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 24
-    width: 540
+    width: 596.5
     height: 479.5
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1709,7 +1030,7 @@ MonoBehaviour:
   m_LastSceneViewRotation: {x: 0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
-    m_SceneView: {fileID: 20}
+    m_SceneView: {fileID: 16}
     m_CameraOverscanSettings:
       m_Opacity: 50
       m_Scale: 1
@@ -1719,7 +1040,7 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_LastDebugDrawMode: 35
   m_ViewIsLockedToObject: 0
---- !u!114 &21
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1742,7 +1063,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 529.5
-    width: 540
+    width: 596.5
     height: 463.5
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1761,7 +1082,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1080, y: 885}
+  m_TargetSize: {x: 1193, y: 885}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1776,8 +1097,8 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -270
-    m_HBaseRangeMax: 270
+    m_HBaseRangeMin: -298.25
+    m_HBaseRangeMax: 298.25
     m_VBaseRangeMin: -221.25
     m_VBaseRangeMax: 221.25
     m_HAllowExceedBaseRangeMin: 1
@@ -1788,7 +1109,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1797,29 +1118,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 540
+      width: 596.5
       height: 442.5
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 270, y: 221.25}
+    m_Translation: {x: 298.25, y: 221.25}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -270
+      x: -298.25
       y: -221.25
-      width: 540
+      width: 596.5
       height: 442.5
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1080, y: 927}
+  m_LastWindowPixelSize: {x: 1193, y: 927}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 00000000000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &22
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1840,9 +1161,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Hierarchy\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 542
+    x: 598.5
     y: 24
-    width: 182
+    width: 202.5
     height: 969
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1860,7 +1181,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9093ffff1a98ffff229effff16a6ffff30acffff3cb2ffff4ebaffff5ac0ffff58c6ffff76ceffffaad2ffffa2d7fffff4dbffffece0ffff2ce5ffffcae9ffffe4f1ffff62f8ffff18aa0000f4ab0000f8ac0000bab50000
+      m_ExpandedIDs: a813ffff0e1effff9626ffff842ffffffc35ffff243bffff2c40ffffb244ffff4851ffffca55ffff9e5affff2463ffff866bffffb873ffffea7cffffe885ffff808affff0893ffff8c9bffff08a4ffff90acffff34b5ffffd0bdfffffcc9ffffc2d2ffff6cdbffff1cfbffffd2a40000e4bb000072c20000eec5000000c70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1877,7 +1198,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 15}
+        m_ClientGUIView: {fileID: 12}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1885,7 +1206,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 7e31c7ef9a64b46b6a5618db40c9a4c3
---- !u!114 &23
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1906,9 +1227,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Project\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 726
+    x: 803
     y: 24
-    width: 228
+    width: 251.5
     height: 969
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1949,7 +1270,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b0230000
     m_LastClickedID: 9136
-    m_ExpandedIDs: 0000000070a7000072a7000074a7000076a7000078a700007aa700007ca700007ea70000
+    m_ExpandedIDs: 0000000068a700006aa700006ca700006ea7000070a7000072a7000074a7000076a70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1978,7 +1299,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000070a7000072a7000074a7000076a7000078a700007aa700007ca700007ea70000
+    m_ExpandedIDs: 0000000068a700006aa700006ca700006ea7000070a7000072a7000074a7000076a70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2036,7 +1357,7 @@ MonoBehaviour:
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115
---- !u!114 &24
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2057,9 +1378,9 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 956
+    x: 1056.5
     y: 24
-    width: 338
+    width: 376.5
     height: 969
   m_SerializedDataModeController:
     m_DataMode: 0

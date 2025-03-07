@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-        public void GameOver()
+     public void GameOver()
     {
         if(gameOverText != null) // Added so test works
              gameOverText.gameObject.SetActive(true);
